@@ -15,7 +15,7 @@ class DeliveryTimeController extends Controller
         ]);
 
 
-        return DeliveryTime::create([
+         DeliveryTime::create([
             'delivery_at' => $request->delivery_at
         ]);
 
