@@ -15,10 +15,10 @@ class CreateExcludingDeliveryTimesTable extends Migration
     {
         Schema::create('excluding_delivery_times', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('citie_delivery_time_id')->unsigned();
+            $table->foreign('citie_delivery_time_id')->references('id')->on('citie_delivery_time');
             $table->date('date');
-            $table->Integer('citie_delivery_time_id');
             $table->timestamps();
-            $table->foreign('citie_delivery_time_id')->references('id')->on('citie_delivery_times');
         });
     }
 

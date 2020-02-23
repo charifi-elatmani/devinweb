@@ -27,6 +27,5 @@ class ExcludingDeliveryTime extends Model
     {
         return $this->belongsTo(DeliveryTime::class);
     }
-
 }
 

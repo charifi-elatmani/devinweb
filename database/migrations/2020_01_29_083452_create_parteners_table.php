@@ -14,11 +14,11 @@ class CreatePartenersTable extends Migration
     public function up()
     {
         Schema::create('parteners', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('citie_id')->unsigned();
+            $table->BigInteger('citie_id')->unsigned();
             $table->timestamps();
-            
+
             $table->foreign('citie_id')->references('id')->on('cities');
 
         });

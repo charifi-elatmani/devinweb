@@ -14,7 +14,7 @@ class CreateDeliveryTimesTable extends Migration
     public function up()
     {
         Schema::create('delivery_times', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('delivery_at');
             $table->timestamps();
 

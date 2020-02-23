@@ -14,9 +14,9 @@ class CreateCitieDeliveryTimesTable extends Migration
     public function up()
     {
         Schema::create('citie_delivery_times', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('citie_id');
-            $table->integer('delivery_time_id');
+            $table->bigIncrements('id');
+            $table->bigInteger('citie_id')->unsigned();
+            $table->bigInteger('delivery_time_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('citie_id')->references('id')->on('cities');
